@@ -60,13 +60,11 @@ class Follow(models.Model):
         verbose_name='Подписка',
         on_delete=models.CASCADE
     )
+
     class Meta:
         constraints = [
-        models.UniqueConstraint(
-            fields=['user', 'following'],
-            name='unique_follow'
-        )
-    ]
-
-    # def __str__(self) -> str:
-    #     return f'{self.user} - {self.following}'
+            models.UniqueConstraint(
+                fields=['user', 'following'],
+                name='unique_follow'
+            )
+        ]
