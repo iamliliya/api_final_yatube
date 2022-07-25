@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 SECRET_KEY = os.getenv('SECRET_KEY')
-PAGE_SIZE = 10
+# PAGE_SIZE = 10
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -100,9 +100,9 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
-    'DEFAULT_PAGINATION_CLASS':
-    'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': PAGE_SIZE,
+    # 'DEFAULT_PAGINATION_CLASS':
+    # 'rest_framework.pagination.PageNumberPagination',
+    # 'PAGE_SIZE': PAGE_SIZE,
 }
 
 SIMPLE_JWT = {
